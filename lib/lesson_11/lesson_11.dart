@@ -14,9 +14,33 @@ class LessonEleven extends StatelessWidget {
         child: Container(
           width: 300,
           height: 150,
+          alignment: Alignment.bottomRight,
+          padding: const EdgeInsets.all(10.0),
           decoration: BoxDecoration(
-            color: Colors.blue,
+            color: const Color.fromRGBO(9, 110, 234, 1),
             borderRadius: BorderRadius.circular(16),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            spacing: 10,
+            children: [
+              Image.asset(
+                'assets/images/star.png',
+              ),
+              // const SizedBox(width: 10),
+              Text(
+                'Привіт, Flutter!',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              // const SizedBox(width: 10),
+              Image.asset(
+                'assets/images/star.png',
+              ),
+            ],
           ),
         ),
       ),
