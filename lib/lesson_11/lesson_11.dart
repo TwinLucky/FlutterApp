@@ -16,10 +16,9 @@ class LessonEleven extends StatelessWidget {
           spacing: 8,
           children: [
             Expanded(
-              flex: 1,
               child: Container(
+                //не прибрав, бо розширюється по всій ширині екрана
                 width: 300,
-                height: 150,
                 alignment: Alignment.topLeft,
                 padding: const EdgeInsets.all(10.0),
                 decoration: BoxDecoration(
@@ -33,7 +32,6 @@ class LessonEleven extends StatelessWidget {
                     Image.asset(
                       'assets/images/star.png',
                     ),
-                    // const SizedBox(width: 10),
                     Text(
                       'Привіт, Flutter!',
                       style: TextStyle(
@@ -42,7 +40,6 @@ class LessonEleven extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    // const SizedBox(width: 10),
                     Image.asset(
                       'assets/images/star.png',
                     ),
@@ -66,7 +63,6 @@ class LessonEleven extends StatelessWidget {
                   Image.asset(
                     'assets/images/star.png',
                   ),
-                  // const SizedBox(width: 10),
                   Text(
                     'Привіт, Flutter!',
                     style: TextStyle(
@@ -75,7 +71,6 @@ class LessonEleven extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  // const SizedBox(width: 10),
                   Image.asset(
                     'assets/images/star.png',
                   ),
@@ -98,7 +93,6 @@ class LessonEleven extends StatelessWidget {
                   Image.asset(
                     'assets/images/star.png',
                   ),
-                  // const SizedBox(width: 10),
                   Text(
                     'Привіт, Flutter!',
                     style: TextStyle(
@@ -107,7 +101,6 @@ class LessonEleven extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  // const SizedBox(width: 10),
                   Image.asset(
                     'assets/images/star.png',
                   ),
