@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/lesson_11/lesson_11.dart';
+import 'package:flutter_application_1/lesson_12/lesson_12.dart';
 
 class WidgetsScreen extends StatelessWidget {
   const WidgetsScreen({super.key});
@@ -29,21 +30,21 @@ class WidgetsScreen extends StatelessWidget {
               ),
             ),
 
-            // Center(
-            //   child: NavigationCard(
-            //     title: 'Widgets Part 2',
-            //     description:
-            //         'Custom Widgets, Stateless vs Stateful Widgets, '
-            //         'Gesture Detector & InkWel, '
-            //         'TextFields & TextFormFields',
-            //     onTap: () => Navigator.push(
-            //       context,
-            //       MaterialPageRoute<Widget>(
-            //         builder: (context) => const WidgetsSecondPartScreen(),
-            //       ),
-            //     ),
-            //   ),
-            // ),
+            Center(
+              child: NavigationCard(
+                title: 'ДЗ №12',
+                description:
+                    'Custom Widgets, Stateless vs Stateful Widgets, '
+                    'Gesture Detector & InkWel, '
+                    'TextFields & TextFormFields',
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute<Widget>(
+                    builder: (context) => const LessonTwelfth(),
+                  ),
+                ),
+              ),
+            ),
           ],
         ),
       ),
