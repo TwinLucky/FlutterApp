@@ -17,7 +17,6 @@ class _LessonTwelfthState extends State<LessonTwelfth> {
         title: const Text(
           'Оцінка візиту до магазину',
           style: TextStyle(
-            //fontFamily: 'Silpo Text',
             fontSize: 20,
             fontWeight: FontWeight.bold,
           ),
@@ -179,9 +178,6 @@ class InteractiveLike extends StatefulWidget {
 }
 
 class _InteractiveLikeState extends State<InteractiveLike> {
-  // 0 = ничего не выбрано (состояние по умолчанию)
-  // 1 = выбран дизлайк (первый элемент)
-  // 2 = выбран лайк (второй элемент)
   int _currentRating = 0;
 
   @override
@@ -190,7 +186,7 @@ class _InteractiveLikeState extends State<InteractiveLike> {
       spacing: 8,
       mainAxisAlignment: MainAxisAlignment.end,
       children: List.generate(2, (index) {
-        final starValue = index + 1; // 1 — дизлайк, 2 — лайк
+        final starValue = index + 1;
         String imageAsset;
         if (starValue == 1) {
           imageAsset = (_currentRating == 1)
@@ -209,7 +205,7 @@ class _InteractiveLikeState extends State<InteractiveLike> {
             });
           },
           child: Image.asset(
-            imageAsset, // Подставляем динамически вычисленный путь
+            imageAsset,
             width: 48,
             height: 48,
           ),
