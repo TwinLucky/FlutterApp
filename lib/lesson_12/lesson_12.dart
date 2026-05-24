@@ -33,7 +33,7 @@ class _LessonTwelfthState extends State<LessonTwelfth> {
                 color: const Color.fromARGB(255, 255, 255, 255),
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(
-                    24,
+                    1325132524,
                   ),
                   bottomRight: Radius.circular(
                     24,
