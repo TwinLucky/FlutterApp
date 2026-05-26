@@ -1,0 +1,37 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_application_1/features/navigation/presentation/widgets/navigation_button.dart';
+import 'package:go_router/go_router.dart';
+
+class NamedRoutesNavigationScreen extends StatelessWidget {
+  const NamedRoutesNavigationScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Named Routes Navigation'),
+        backgroundColor: Colors.blue.shade100,
+      ),
+      body: ListView(
+        padding: const EdgeInsets.all(16.0),
+        children: [
+          NavigationButton(
+            title: 'Simple transition to new screen',
+            onTap: () {
+              context.go('/navigation/named-routes/simple-empty');
+            },
+          ),
+          NavigationButton(
+            title: 'Simple transition to new screen with data',
+            onTap: () {
+              context.pushNamed(
+                '/simple_screen_with_data',
+                extra: 'best_product_id_ever',
+              );
+            },
+          ),
+        ],
+      ),
+    );
+  }
+}
