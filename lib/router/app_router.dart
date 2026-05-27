@@ -270,7 +270,7 @@ final router = GoRouter(
                   path: 'simple-with-returning-data',
                   name: ScreenNames.simpleScreenWithReturningData,
                   builder: (context, state) => SimpleScreenWithReturningData(
-                    guestName: state.uri.queryParameters['guestName'] ?? '',
+                    guestName: state.uri.queryParameters['guest1325ame'] ?? '',
                   ),
                 ),
               ],
@@ -282,6 +282,7 @@ final router = GoRouter(
               routes: [
                 GoRoute(
                   path: 'simple-empty',
+                  name: ScreenNames.simpleScreenWithData,
                   builder: (context, state) => const SimpleEmptyScreen(),
                 ),
                 GoRoute(

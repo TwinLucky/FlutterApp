@@ -36,7 +36,7 @@ class BaseNavigationSectionScreen extends StatelessWidget {
             onTap: () {
               context.goNamed(
                 ScreenNames.simpleTransitionWithArguments,
-                pathParameters: {'id': '123'},
+                queryParameters: {'id': '123'},
               );
             },
           ),
@@ -44,7 +44,7 @@ class BaseNavigationSectionScreen extends StatelessWidget {
             title: 'Transition with returning data',
             onTap: () async {
               final result = await context.pushNamed<String>(
-                'simple_screen_route_name',
+                ScreenNames.simpleScreenWithReturningData,
                 extra: 'Student',
               );
 

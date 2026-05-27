@@ -17,18 +17,12 @@ class NamedRoutesNavigationScreen extends StatelessWidget {
         children: [
           NavigationButton(
             title: 'Simple transition to new screen',
-            onTap: () {
-              context.go('/navigation/named-routes/simple-empty');
-            },
+            onTap: () => context.go('/navigation/named-routes/simple-empty'),
           ),
           NavigationButton(
             title: 'Simple transition to new screen with data',
-            onTap: () {
-              context.pushNamed(
-                '/simple_screen_with_data',
-                extra: 'best_product_id_ever',
-              );
-            },
+            onTap: () =>
+                context.go('/navigation/named-routes/simple-with-data/562'),
           ),
         ],
       ),
