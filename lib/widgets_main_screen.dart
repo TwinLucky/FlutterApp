@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/lesson_11/lesson_11.dart';
-import 'package:flutter_application_1/lesson_12/lesson_12.dart';
-import 'package:flutter_application_1/lesson_13/lesson_13.dart';
+import 'package:flutter_application_1/features/app/screens/page_names.dart';
+import 'package:go_router/go_router.dart';
 
 class WidgetsScreen extends StatelessWidget {
   const WidgetsScreen({super.key});
@@ -19,44 +18,33 @@ class WidgetsScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             NavigationCard(
-              title: 'ДЗ №11',
+              title: 'Widgets Part 1',
               description:
                   'Container, SizedBox, Padding, Align, Center, Text, Row, '
                   'Column, Expanded, Buttons, Scroll',
-              onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute<Widget>(
-                  builder: (context) => const LessonEleven(),
-                ),
-              ),
+              onTap: () => context.goNamed(ScreenNames.widgetsFirstPart),
             ),
-
-            Center(
-              child: NavigationCard(
-                title: 'ДЗ №12',
-                description:
-                    'Custom Widgets, Stateless vs Stateful Widgets, '
-                    'Gesture Detector & InkWel, '
-                    'TextFields & TextFormFields',
-                onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute<Widget>(
-                    builder: (context) => const LessonTwelfth(),
-                  ),
-                ),
-              ),
+            NavigationCard(
+              title: 'Widgets Part 2',
+              description:
+                  'Custom Widgets, Stateless vs Stateful Widgets, '
+                  'Gesture Detector & InkWel, '
+                  'TextFields & TextFormFields',
+              onTap: () => context.goNamed(ScreenNames.widgetsSecondPart),
             ),
-            Center(
-              child: NavigationCard(
-                title: 'ДЗ №13',
-                description: 'Understanding constraints',
-                onTap: () => Navigator.push(
-                  context,
-                  MaterialPageRoute<Widget>(
-                    builder: (context) => const LessonThirteenth(),
-                  ),
-                ),
-              ),
+            NavigationCard(
+              title: 'Understanding constraints',
+              description:
+                  'Constraints go down. Sizes go up. Parent '
+                  'sets position.',
+              onTap: () =>
+                  context.goNamed(ScreenNames.understandingConstraints),
+            ),
+            NavigationCard(
+              title: 'Constrains training',
+              description:
+                  'Training to understand the constraints of the widgets',
+              onTap: () => context.goNamed(ScreenNames.constrainsTraining),
             ),
           ],
         ),

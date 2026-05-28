@@ -1,7 +1,7 @@
 // ignore_for_file: use_colored_box
 
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/colors_app.dart';
+import 'package:flutter_application_1/features/app/screens/colors_app.dart';
 import 'package:flutter_application_1/features/widgets/presentation/widgets/part3/utils_widget.dart';
 
 class LessonThirteenth extends StatefulWidget {
