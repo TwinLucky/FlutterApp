@@ -6,6 +6,11 @@ import 'package:flutter_application_1/features/navigation/presentation/screens/b
 import 'package:flutter_application_1/features/navigation/presentation/screens/base_navigation/simple_screen_with_data.dart';
 import 'package:flutter_application_1/features/navigation/presentation/screens/base_navigation/simple_screen_with_returning_data.dart';
 import 'package:flutter_application_1/features/navigation/presentation/screens/named_navigation/named_routes_navigation.dart';
+import 'package:flutter_application_1/features/state_managment/bloc_couter_example/bloc_counter_example_screen.dart';
+import 'package:flutter_application_1/features/state_managment/common_mistakes_screen.dart';
+import 'package:flutter_application_1/features/state_managment/cubit_counter_example/cubit_counter_example_screen.dart';
+import 'package:flutter_application_1/features/state_managment/simple_example.dart/simple_state_management_screen.dart';
+import 'package:flutter_application_1/features/state_managment/state_management_main_screen.dart';
 import 'package:flutter_application_1/features/widgets/presentation/screens/constrains_training.dart';
 import 'package:flutter_application_1/features/widgets/presentation/screens/widgets_first_part_screen.dart';
 import 'package:flutter_application_1/features/widgets/presentation/screens/widgets_second_part_screen.dart';
@@ -295,6 +300,35 @@ final router = GoRouter(
             ),
           ],
         ),
+        // State Management routes
+        GoRoute(
+          path: 'state-management',
+          name: ScreenNames.stateManagement,
+          builder: (context, state) => const StateManagementMainScreen(),
+          routes: [
+            GoRoute(
+              path: 'simple-state-management',
+              name: ScreenNames.simpleStateManagement,
+              builder: (context, state) => const SimpleStateManagementScreen(),
+            ),
+            GoRoute(
+              path: 'bloc-counter-example',
+              name: ScreenNames.blocCounterExample,
+              builder: (context, state) => const BlocCounterExampleScreen(),
+            ),
+            GoRoute(
+              path: 'cubit-counter-example',
+              name: ScreenNames.cubitCounterExample,
+              builder: (context, state) => const CubitCounterExampleScreen(),
+            ),
+            GoRoute(
+              path: 'common-mistakes',
+              name: ScreenNames.commonMistakes,
+              builder: (context, state) => const CommonMistakesScreen(),
+            ),
+          ],
+        ),
+        // HomeMework routes
         GoRoute(
           path: 'homework',
           name: ScreenNames.homework,

@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/features/state_managment/bloc_couter_example/bloc/counter_bloc.dart';
+import 'package:flutter_application_1/features/state_managment/cubit_counter_example/cubit/counter_cubit.dart';
+import 'package:flutter_application_1/features/state_managment/simple_example.dart/providers/counter_provider.dart';
 import 'package:flutter_application_1/router/app_router.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const FlutterWidgetsApp());
@@ -10,8 +15,21 @@ class FlutterWidgetsApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
-      routerConfig: router,
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => CounterBloc(),
+        ),
+        BlocProvider(
+          create: (context) => CounterCubit(),
+        ),
+      ],
+      child: ChangeNotifierProvider(
+        create: (context) => CounterProvider(),
+        child: MaterialApp.router(
+          routerConfig: router,
+        ),
+      ),
     );
   }
 }

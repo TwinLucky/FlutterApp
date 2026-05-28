@@ -26,6 +26,10 @@ class HomeScreen extends StatelessWidget {
               title: 'Navigation',
               onTap: () => context.goNamed(ScreenNames.navigation),
             ),
+            FeatureCard(
+              title: 'State Management',
+              onTap: () => context.goNamed(ScreenNames.stateManagement),
+            ),
             SizedBox(height: 20),
             FeatureCard(
               title: 'Домашні завдання',

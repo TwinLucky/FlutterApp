@@ -2,6 +2,7 @@ abstract class ScreenNames {
   static const home = 'home';
   static const widgets = 'widgets';
   static const navigation = 'navigation';
+  static const stateManagement = 'state-management';
   static const widgetsFirstPart = 'widgets-first-part';
   static const widgetsSecondPart = 'widgets-second-part';
   static const understandingConstraints = 'understanding-constraints';
@@ -62,4 +63,22 @@ abstract class ScreenNames {
       'understanding-constraints-example-7';
   static const understandingConstraintsExample8 =
       'understanding-constraints-example-8';
+
+  // State Management
+  static const simpleStateManagement = 'simple-state-management';
+  static const blocCounterExample = 'bloc-counter-example';
+  static const cubitCounterExample = 'cubit-counter-example';
+  static const commonMistakes = 'common-mistakes';
+
+  // Understanding Constraints Examples
+  // static const understandingConstraintsExample1 =
+  //     'understanding-constraints-example-1';
+  // static const understandingConstraintsExample2 =
+  //     'understanding-constraints-example-2';
+  // static const understandingConstraintsExample3 =
+  //     'understanding-constraints-example-3';
+  // static const understandingConstraintsExample4 =
+  //     'understanding-constraints-example-4';
+  // static const understandingConstraintsExample5 =
+  //     'understanding-constraints-example-5';
 }
