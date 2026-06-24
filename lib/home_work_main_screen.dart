@@ -42,6 +42,13 @@ class HomeworkMainScreen extends StatelessWidget {
                 onTap: () => context.goNamed(ScreenNames.homework13),
               ),
             ),
+            Center(
+              child: NavigationCard(
+                title: 'ДЗ №18',
+                description: 'State managment',
+                onTap: () => context.goNamed(ScreenNames.homework18),
+              ),
+            ),
           ],
         ),
       ),

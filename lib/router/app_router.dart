@@ -45,8 +45,12 @@ import 'package:flutter_application_1/home_work_main_screen.dart';
 import 'package:flutter_application_1/lesson_11/lesson_11.dart';
 import 'package:flutter_application_1/lesson_12/lesson_12.dart';
 import 'package:flutter_application_1/lesson_13/lesson_13.dart';
+import 'package:flutter_application_1/lesson_18/homework_%D1%81ubit/homework_cubit_screen.dart';
+import 'package:flutter_application_1/lesson_18/homework_bloc/homework_bloc_screen.dart';
+import 'package:flutter_application_1/lesson_18/state_managment_base_screen.dart';
 import 'package:flutter_application_1/navigation_main_screen.dart';
 import 'package:flutter_application_1/widgets_main_screen.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
 final router = GoRouter(
@@ -348,6 +352,35 @@ final router = GoRouter(
               path: 'homework-13',
               name: ScreenNames.homework13,
               builder: (context, state) => const LessonThirteenth(),
+            ),
+            GoRoute(
+              path: 'homework-18',
+              name: ScreenNames.homework18,
+              builder: (context, state) => const LessonEighteenth(
+                title: 'HW-18. State managment example',
+              ),
+              routes: [
+                GoRoute(
+                  path: 'bloc-example',
+                  name: ScreenNames.blocExample,
+                  builder: (context, state) {
+                    return BlocProvider<CounterBloc>(
+                      create: (context) => CounterBloc(),
+                      child: const HomeworkBlocScreen(title: 'bloc example'),
+                    );
+                  },
+                ),
+                GoRoute(
+                  path: 'cubit-example',
+                  name: ScreenNames.cubitExample,
+                  builder: (context, state) {
+                    return BlocProvider<CounterCubit>(
+                      create: (context) => CounterCubit(),
+                      child: const HomeworkCubitScreen(title: 'cubit example'),
+                    );
+                  },
+                ),
+              ],
             ),
           ],
         ),
