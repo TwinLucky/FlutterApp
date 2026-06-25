@@ -11,6 +11,7 @@ abstract class ScreenNames {
   static const homework11 = 'homework-11';
   static const homework12 = 'homework-12';
   static const homework13 = 'homework-13';
+  static const homework18 = 'homework-18';
 
   // Widget examples
   static const containerExample = 'container';
@@ -69,6 +70,9 @@ abstract class ScreenNames {
   static const blocCounterExample = 'bloc-counter-example';
   static const cubitCounterExample = 'cubit-counter-example';
   static const commonMistakes = 'common-mistakes';
+
+  static const blocExample = 'bloc-example';
+  static const cubitExample = 'cubit-example';
 
   // Understanding Constraints Examples
   // static const understandingConstraintsExample1 =
